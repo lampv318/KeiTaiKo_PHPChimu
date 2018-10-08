@@ -32,7 +32,6 @@
 en:
   hello: "Hello world"
   sign_out: "Sign Out"
-  sign_up: "Sign Up"
   reviews:
     new:
       create_review: "New Reivew"
@@ -40,3 +39,12 @@ en:
     create:
       create_successfully: "Create review successfully"
       create_fail: "Can't create now. Please try again..."
+  users:
+    registrations:
+      edit: 
+        profile: "Profile"
+        update: "Update"
+        change_avatar: "Change Avatar"
+      new:
+        sign_up: "Sign Up"
+
