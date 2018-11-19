@@ -99,7 +99,7 @@ en:
   users:
     show:
       show: "Profile"
-      name: "Name"
+      name: "Full Name"
       email: "Email"
     registrations:
       edit:
@@ -159,7 +159,7 @@ en:
         price_str: "%{price}VND"
     users:
       user_detail:
-        name: "Name: "
+        name: "Full Name: "
         email: "Email: "
         created_at: "Created At: "
   search:
