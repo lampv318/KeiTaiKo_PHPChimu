@@ -140,9 +140,6 @@
             </div>
           </div>
         </div>
-        <div class="comments-section" id="comment-show">
-          <%= render "comments/comment_show" %>
-        </div>
         <div class="contact-2 mb-60">
           <h3 class="heading"><%= t ".send_comment" %></h3>
           <div class="container">
@@ -152,7 +149,7 @@
                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="form-group message">
                       <%= f.label :content %><br />
-                      <%= text_area :comment, :content, :rows => 5, :cols => 70, class:"form-control", placeholder:"Write message" %>
+                      <%= text_area :comment, :content, :rows => 3, :cols => 70, class:"form-control", placeholder:"Write message" %>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -164,6 +161,9 @@
               <% end %>
             </div>
           </div>
+        </div>
+        <div class="comments-section" id="comment-show">
+          <%= render "comments/comment_show" %>
         </div>
       </div>
       <%= render "rightside" %>

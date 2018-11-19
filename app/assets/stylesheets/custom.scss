@@ -90,3 +90,8 @@
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+textarea.form-control {
+    height: auto !important;
+    min-height: 50px !important;
+}
