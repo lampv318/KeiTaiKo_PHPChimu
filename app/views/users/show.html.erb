@@ -1,12 +1,12 @@
 <% provide :title, t(".show") %>
 <div class="user-page content-area-14">
   <div class="container">
-    <div class="row">
+    <div class="row" style="min-height: 30vh;">
       <div class="col-lg-4 col-md-5 col-sm-12">
         <div class="user-profile-box mrb">
           <div class="header clearfix">
             <h2><%= @user.name %></h2>
-            <img src="<%= @user.picture %>" alt="avatar" class="img-fluid profile-img">
+            <!-- <img src="<%= @user.picture %>" alt="avatar" class="img-fluid profile-img"> -->
             <% if @user.picture.present? %>
               <%= cl_image_tag(@user.picture, class:"img-fluid-1 profile-img") %>
             <% else %>
