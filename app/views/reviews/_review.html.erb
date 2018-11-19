@@ -38,19 +38,19 @@
           </div>
           <ul class="facilities-list clearfix">
             <li>
-              <i class="fa fa-crop"></i> <%= review.screen_size %>
+              <span class="text-muted">Size: </span> <%= review.screen_size %>
             </li>
             <li>
-              <i class="fa fa-mobile"></i> <%= review.operator_system.name %>
+              <span class="text-muted">OS: </span> <%= review.operator_system.name %>
             </li>
             <li>
-              <i class="fa fa-microchip"></i> <%= review.cpu %>
+              <span class="text-muted">Cpu: </span> <%= review.cpu %>
             </li>
             <li>
-              <i class="fa fa-battery-full"></i> <%= review.battery %>
+              <span class="text-muted">Battery: </span> <%= review.battery %>
             </li>
             <li>
-              <i class="fa fa-codepen"></i> <%= review.brand.name %>
+              <span class="text-muted">Branch: </span> <%= review.brand.name %>
             </li>
           </ul>
         </div>
