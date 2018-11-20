@@ -6,6 +6,6 @@ class SearchController < ApplicationController
   def set_search
     q = params[:q]
     @users = User.search(name_cont: q).result.page params[:page]
-    @reviews = Review.search(name_cont: q).result.page params[:page]
+    @reviews = Review.checked_review.search(name_cont: q).result.page params[:page]
   end
 end
