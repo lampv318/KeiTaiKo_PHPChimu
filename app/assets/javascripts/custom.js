@@ -34,4 +34,7 @@ $(window).on('load', function () {
 		setTimeout(function(){ $('.form-group.message #comment_content').val(''); }, 1000);
 	})
 
+	$('.star').on('click', function() {
+		setTimeout(function(){ location.reload(); }, 500);
+	})
 });
