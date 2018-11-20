@@ -57,7 +57,7 @@
         <li>
           <span class="text-muted">Branch: </span> <%= review.brand.name %>
         </li>
-        <%= link_to admin_review_path(review), method: :put, remote: true do %>
+        <%= link_to admin_review_path(review), method: :put do %>
           <% if review.is_confirm? %>
             <li>
               <i class="fa fa-check-circle"></i> Checked
