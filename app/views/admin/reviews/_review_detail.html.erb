@@ -14,7 +14,11 @@
             <i class="fa fa-star-o"></i>
           </div>
         </div>
+        <% if review.picture.present? %>
+        <%= cl_image_tag(review.picture, class:"img-fluid") %>
+        <% else %>
         <%= image_tag("banner-1.jpg", class:"img-fluid") %>
+        <% end %>
       <% end %>
       <div class="property-overlay">
         <%= link_to review, class:"overlay-link" do %>

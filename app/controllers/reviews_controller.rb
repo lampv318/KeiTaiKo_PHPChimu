@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
     @review = current_user.reviews.new review_params
     if review.save
       flash[:success] = t(".create_successfully")
-      redirect_to root_path
+      redirect_to review
     else
       flash[:danger] = t(".create_fail")
       redirect_to new_review_path

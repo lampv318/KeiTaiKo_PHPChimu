@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div class="row">
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+      <div class="col-xl-3 col-lg-1 col-md-6 col-sm-6">
         <div class="footer-item">
           <h4>Contact Us</h4>
           <ul class="contact-info">
@@ -18,76 +18,14 @@
               Fax: +8888 8888 88
             </li>
           </ul>
-          <ul class="social-list clearfix">
-            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
-            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
         </div>
       </div>
-      <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
-        <div class="footer-item">
-          <h4>
-            Reviews
-          </h4>
-          <ul class="links">
-            <li>
-              <a href="#"><i class="fa fa-angle-right"></i>About us</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-angle-right"></i>Service</a>
-            </li>
-           <!--  <li>
-              <a href="#"><i class="fa fa-angle-right"></i>Properties Listing</a>
-            </li> -->
-            <!-- <li>
-              <a href="#"><i class="fa fa-angle-right"></i>Properties Grid</a>
-            </li> -->
-            <li>
-              <a href="#"><i class="fa fa-angle-right"></i>Contact Us</a>
-            </li>
-            <!-- <li>
-              <a href="#"><i class="fa fa-angle-right"></i>Blog</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-angle-right"></i>Property Details</a>
-            </li> -->
-          </ul>
-        </div>
+      <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6">
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-        <div class="recent-posts footer-item">
-          <h4>Recent Properties</h4>
-          <div class="media mb-4">
-            <a class="pr-4" href="properties-details.html">
-            <img src="https://cdn.mos.cms.futurecdn.net/tZUbviKrMhwVsajA27EdTJ-970-80.jpg" alt="sub-property">
-            </a>
-            <div class="media-body align-self-center">
-              <h5>
-                <a href="properties-details.html">Iphone 6</a>
-              </h5>
-              <p>February 27, 2018</p>
-              <!-- <p> <strong>$245,000</strong></p> -->
-            </div>
-          </div>
-          <div class="media">
-            <a class="pr-4" href="properties-details.html">
-            <img src="https://khacten.com/wp-content/uploads/2017/11/iPX-d%C3%A1n-da-b%C3%B2-64.jpg" alt="sub-property-3">
-            </a>
-            <div class="media-body align-self-center">
-              <h5>
-                <a href="properties-details.html">Iphone X</a>
-              </h5>
-              <p>February 27, 2018</p>
-              <!-- <p> <strong>$245,000</strong></p> -->
-            </div>
-          </div>
-        </div>
       </div>
       <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-        <div class="footer-item clearfix">
+        <!-- <div class="footer-item clearfix">
           <h4>Subscribe</h4>
           <div class="Subscribe-box">
             <p>Get more reviews.</p>
@@ -101,6 +39,33 @@
                 </button>
               </p>
             </form>
+          </div>
+        </div> -->
+        <div class="recent-posts footer-item">
+          <h4>Recent Reviews</h4>
+          <div class="media mb-4">
+            <% if @rrf[0].picture.present? %>
+              <%= cl_image_tag(@rrf[0].picture) %>
+            <% else %>
+              <%= image_tag('banner-1.jpg') %>
+            <% end %>
+            <div class="media-body align-self-center">
+              <h5>
+                <%= link_to @rrf[0].name, @rrf[0] %>
+              </h5>
+            </div>
+          </div>
+          <div class="media">
+            <% if @rrf[1].picture.present? %>
+              <%= cl_image_tag(@rrf[1].picture) %>
+            <% else %>
+              <%= image_tag('banner-1.jpg') %>
+            <% end %>
+            <div class="media-body align-self-center">
+              <h5>
+                <%= link_to @rrf[1].name, @rrf[1] %>
+              </h5>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :recent_review_footer
 
   protected
 
@@ -40,5 +41,9 @@ class ApplicationController < ActionController::Base
     return if instance_variable_get "@#{instance_name}"
     flash[:danger] =
       I18n.t("#{instance_name.pluralize}.messages.#{instance_name}_not_found")
+  end
+
+  def recent_review_footer
+    @rrf = Review.where(is_confirm: true).last(2)
   end
 end
