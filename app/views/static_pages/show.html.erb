@@ -149,7 +149,9 @@
           </div>
           <!-- detail -->
           <div class="detail">
-            <h5 class="title"><a href="properties-details.html"><%= @recent_reviews[0].name %></a></h5>
+            <h5 class="title">
+              <%= link_to @recent_reviews[0].name, @recent_reviews[0] %>
+            </h5>
             <h4 class="price">
               <%= t "price_str", price: price_review(@recent_reviews[0].price) %>
             </h4>
@@ -176,7 +178,7 @@
           </div>
           <!-- detail -->
           <div class="detail">
-            <h5 class="title"><a href="properties-details.html"><%= @recent_reviews[1].name %></a></h5>
+            <h5 class="title"><%= link_to @recent_reviews[1].name, @recent_reviews[1] %></h5>
             <h4 class="price">
               <%= t "price_str", price: price_review(@recent_reviews[1].price) %>
             </h4>
@@ -203,7 +205,7 @@
           </div>
           <!-- detail -->
           <div class="detail">
-            <h5 class="title"><a href="properties-details.html"><%= @recent_reviews[2].name %></a></h5>
+            <h5 class="title"><%= link_to @recent_reviews[2].name, @recent_reviews[2] %></h5>
             <h4 class="price">
               <%= t "price_str", price: price_review(@recent_reviews[2].price) %>
             </h4>
@@ -230,7 +232,7 @@
           </div>
           <!-- detail -->
           <div class="detail">
-            <h5 class="title"><a href="properties-details.html"><%= @recent_reviews[3].name %></a></h5>
+            <h5 class="title"><%= link_to @recent_reviews[3].name, @recent_reviews[3] %></h5>
             <h4 class="price">
               <%= t "price_str", price: price_review(@recent_reviews[3].price) %>
             </h4>

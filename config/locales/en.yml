@@ -33,7 +33,7 @@ en:
   home: "Home"
   hello: "Hello world"
   sign_out: "Sign Out"
-  price_str: "%{price}VND"
+  price_str: "%{price}"
   layouts:
     header:
       my_profile: "My Profile"
@@ -156,7 +156,7 @@ en:
         confirmed: "You have just confirmed that review."
         confirm_fail: "Somethings errors.... Please try again."
       review_detail:
-        price_str: "%{price}VND"
+        price_str: "%{price}"
     users:
       user_detail:
         name: "Full Name: "
