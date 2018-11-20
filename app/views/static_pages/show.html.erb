@@ -142,19 +142,9 @@
             <% end %>
             </a>
             <div class="property-overlay">
-              <a href="properties-details.html" class="overlay-link">
+              <%= link_to @recent_reviews[0], class:"overlay-link" do %>
               <i class="fa fa-link"></i>
-              </a>
-              <a class="overlay-link property-video" title="Test Title">
-              <i class="fa fa-video-camera"></i>
-              </a>
-              <div class="property-magnify-gallery">
-                <a href="assets/img/property-3.jpg" class="overlay-link">
-                <i class="fa fa-expand"></i>
-                </a>
-                <a href="assets/img/property-7.jpg" class="hidden"></a>
-                <a href="assets/img/property-6.jpg" class="hidden"></a>
-              </div>
+              <% end %>
             </div>
           </div>
           <!-- detail -->
@@ -179,19 +169,9 @@
             <% end %>
             </a>
             <div class="property-overlay">
-              <a href="properties-details.html" class="overlay-link">
+              <%= link_to @recent_reviews[1], class:"overlay-link" do %>
               <i class="fa fa-link"></i>
-              </a>
-              <a class="overlay-link property-video" title="Test Title">
-              <i class="fa fa-video-camera"></i>
-              </a>
-              <div class="property-magnify-gallery">
-                <a href="assets/img/property-7.jpg" class="overlay-link">
-                <i class="fa fa-expand"></i>
-                </a>
-                <a href="assets/img/property-4.jpg" class="hidden"></a>
-                <a href="assets/img/property-3.jpg" class="hidden"></a>
-              </div>
+              <% end %>
             </div>
           </div>
           <!-- detail -->
@@ -216,19 +196,9 @@
             <% end %>
             </a>
             <div class="property-overlay">
-              <a href="properties-details.html" class="overlay-link">
+              <%= link_to @recent_reviews[2], class:"overlay-link" do %>
               <i class="fa fa-link"></i>
-              </a>
-              <a class="overlay-link property-video" title="Test Title">
-              <i class="fa fa-video-camera"></i>
-              </a>
-              <div class="property-magnify-gallery">
-                <a href="assets/img/property-5.jpg" class="overlay-link">
-                <i class="fa fa-expand"></i>
-                </a>
-                <a href="assets/img/property-7.jpg" class="hidden"></a>
-                <a href="assets/img/property-6.jpg" class="hidden"></a>
-              </div>
+              <% end %>
             </div>
           </div>
           <!-- detail -->
@@ -253,19 +223,9 @@
             <% end %>
             </a>
             <div class="property-overlay">
-              <a href="properties-details.html" class="overlay-link">
+              <%= link_to @recent_reviews[3], class:"overlay-link" do %>
               <i class="fa fa-link"></i>
-              </a>
-              <a class="overlay-link property-video" title="Test Title">
-              <i class="fa fa-video-camera"></i>
-              </a>
-              <div class="property-magnify-gallery">
-                <a href="assets/img/property-1.jpg" class="overlay-link">
-                <i class="fa fa-expand"></i>
-                </a>
-                <a href="assets/img/property-7.jpg" class="hidden"></a>
-                <a href="assets/img/property-3.jpg" class="hidden"></a>
-              </div>
+              <% end %>
             </div>
           </div>
           <!-- detail -->
@@ -298,7 +258,6 @@
                 <div class="mask">
                   <h2><%= @most_popular_brands[0].name %></h2>
                   <p><%= @most_popular_brands[0].reviews.count %></p>
-                  <a href="properties-details.html" class="btn btn-border">Read more</a>
                 </div>
               </div>
             </div>
@@ -308,7 +267,6 @@
                 <div class="mask">
                   <h2><%= @most_popular_brands[1].name %></h2>
                   <p><%= @most_popular_brands[1].reviews.count %></p>
-                  <a href="properties-details.html" class="btn btn-border">Read more</a>
                 </div>
               </div>
             </div>
@@ -318,7 +276,6 @@
                 <div class="mask">
                   <h2><%= @most_popular_brands[2].name %></h2>
                   <p><%= @most_popular_brands[2].reviews.count %></p>
-                  <a href="properties-details.html" class="btn btn-border">Read more</a>
                 </div>
               </div>
             </div>
@@ -330,7 +287,6 @@
             <div class="mask">
               <h2><%= @most_popular_brands[3].name %></h2>
               <p><%= @most_popular_brands[3].reviews.count %></p>
-              <a href="properties-details.html" class="btn btn-border">Read more</a>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def show
-    @recent_reviews = Review.last(4)
+    @recent_reviews = Review.where(is_confirm: true).last(4)
     
     @users = User.all.sort { |a, b| a.reviews.count <=> b.reviews.count }
     @most_review_users = @users.reverse.first(4)
