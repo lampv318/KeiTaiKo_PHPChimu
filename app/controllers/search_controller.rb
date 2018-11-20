@@ -4,8 +4,8 @@ class SearchController < ApplicationController
   attr_reader :reviews
 
   def set_search
-    q= params[:q]
-    @users = User.search(name_cont: q).result
-    @reviews = Review.search(name_cont: q).result
+    q = params[:q]
+    @users = User.search(name_cont: q).result.page params[:page]
+    @reviews = Review.search(name_cont: q).result.page params[:page]
   end
 end
