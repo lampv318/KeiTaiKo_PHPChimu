@@ -33,7 +33,7 @@ class ReviewsController < ApplicationController
   def update
     if review.update_attributes review_params
       flash[:success] = t(".update_successfully")
-      redirect_to edit_review_path(params[:id])
+      redirect_to review
     else
       flash[:danger] = t(".update_fail")
       redirect_to edit_review_path(params[:id])
@@ -86,7 +86,7 @@ class ReviewsController < ApplicationController
   end
 
   def show_action
-    @review_recent = Review.last(3)
+    @review_recent = Review.where(is_confirm: true).last(3)
     @brand_all = Brand.all
   end
 end

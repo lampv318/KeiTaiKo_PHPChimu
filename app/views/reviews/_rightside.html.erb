@@ -5,7 +5,11 @@
       <h5 class="sidebar-title">Brand</h5>
       <ul>
         <% @brand_all.each do |brand| %>
-          <li><a href="#"><%= brand.name %><span>(<%= brand.reviews.count %>)</span></a></li>
+          <li>
+            <%= link_to brand_path(brand) do %>
+              <%= brand.name %><span>(<%= brand.reviews.where(is_confirm: true).count %>)</span>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div>

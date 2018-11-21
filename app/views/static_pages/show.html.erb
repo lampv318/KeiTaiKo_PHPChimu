@@ -260,6 +260,7 @@
                 <div class="mask">
                   <h2><%= @most_popular_brands[0].name %></h2>
                   <p><%= @most_popular_brands[0].reviews.count %></p>
+                  <%= link_to "Read more", brand_path(@most_popular_brands[0]), class: "btn btn-border" %>
                 </div>
               </div>
             </div>
@@ -269,15 +270,17 @@
                 <div class="mask">
                   <h2><%= @most_popular_brands[1].name %></h2>
                   <p><%= @most_popular_brands[1].reviews.count %></p>
+                  <%= link_to "Read more", brand_path(@most_popular_brands[1]), class: "btn btn-border" %>
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-pad wow fadeInUp delay-04s">
               <div class="overview overview-box">
-                <%= image_tag("https://znews-photo.zadn.vn/w960/Uploaded/spcwvovd/2017_05_03/1BlackBerry_KeyOne_zing.jpg", class:"img-fluid-1") %>
+                <%= image_tag("https://thegioiblackberry.com.vn/wp-content/uploads/2016/08/Blackberry-Passport-man-hinh.jpg", class:"img-fluid-1") %>
                 <div class="mask">
                   <h2><%= @most_popular_brands[2].name %></h2>
                   <p><%= @most_popular_brands[2].reviews.count %></p>
+                  <%= link_to "Read more", brand_path(@most_popular_brands[2]), class: "btn btn-border" %>
                 </div>
               </div>
             </div>
@@ -285,10 +288,11 @@
         </div>
         <div class="col-lg-5 col-md-12 col-pad wow fadeInRight delay-04s">
           <div class="overview aa overview-box">
-            <%= image_tag("https://znews-photo.zadn.vn/w960/Uploaded/spcwvovd/2017_05_03/1BlackBerry_KeyOne_zing.jpg", class:"big-img img-fluid-1") %>
+            <%= image_tag("https://cdn1.vienthonga.vn/image/2018/3/2/100000_2-mau-flagship-nokia-8-pro-va-nokia-9-se-toa-sang-nam-2018-1.jpg", class:"big-img img-fluid-1") %>
             <div class="mask">
               <h2><%= @most_popular_brands[3].name %></h2>
               <p><%= @most_popular_brands[3].reviews.count %></p>
+              <%= link_to "Read more", brand_path(@most_popular_brands[3]), class: "btn btn-border" %>
             </div>
           </div>
         </div>
