@@ -88,6 +88,7 @@
   <div class="container">
     <div class="tabbing tabbing-box mb-60">
       <ul class="nav nav-tabs" id="carTab" role="tablist">
+        <% @flag = 1 %>
         <li class="nav-item">
           <a class="nav-link active show" id="<%= @brands.first.name %>-tab" data-toggle="tab" href="#<%= @brands.first.name %>" role="tab" aria-controls="<%= @brands.first.name %>" aria-selected="false"><%= @brands.first.name %></a>
         </li>

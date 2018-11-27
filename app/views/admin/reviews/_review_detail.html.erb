@@ -61,15 +61,17 @@
         <li>
           <span class="text-muted">Branch: </span> <%= review.brand.name %>
         </li>
-        <%= link_to admin_review_path(review), method: :put do %>
-          <% if review.is_confirm? %>
-            <li>
-              <i class="fa fa-check-circle"></i> Checked
-            </li>
-          <% else %>
-            <li>
-              <i class="fa fa-ban"></i> Not Checked
-            </li>
+        <% if user_signed_in? && current_user.is_admin? && @flag != 1%>
+          <%= link_to admin_review_path(review), method: :put do %>
+            <% if review.is_confirm? %>
+              <li>
+                <i class="fa fa-check-circle"></i> Checked
+              </li>
+            <% else %>
+              <li>
+                <i class="fa fa-ban"></i> Not Checked
+              </li>
+            <% end %>
           <% end %>
         <% end %>
       </ul>
