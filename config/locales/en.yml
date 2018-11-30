@@ -101,6 +101,7 @@ en:
       show: "Profile"
       name: "Full Name"
       email: "Email"
+      cant_find: "Can't find this user"
     registrations:
       edit:
         profile: "Profile"
