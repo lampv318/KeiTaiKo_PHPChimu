@@ -27,6 +27,7 @@ gem "ratyrate"
 gem "kaminari"
 gem "loofah", ">= 2.2.3"
 gem "ransack"
+gem "chartkick"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
