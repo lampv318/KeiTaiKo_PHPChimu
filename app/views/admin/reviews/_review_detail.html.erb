@@ -1,19 +1,15 @@
 <div class="col-lg-4 col-md-6 col-sm-12" id="<%= review.id %>-details">
   <div class="property-box">
     <div class="property-thumbnail">
-      <%= link_to review do %>
-        <div class="price-ratings-box">
-          <p class="price">
-            <%= t ".price_str", price: price_review(review.price) %>
-          </p>
-          <div class="ratings">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
+      <div class="price-ratings-box">
+        <p class="price">
+          <%= t ".price_str", price: price_review(review.price) %>
+        </p>
+        <div class="ratings">
+          <%= rating_for review, "original_score", star: 5,  disable_after_rate: false %>
         </div>
+      </div>
+      <%= link_to review do %>
         <% if review.picture.present? %>
         <%= cl_image_tag(review.picture, class:"img-fluid") %>
         <% else %>
@@ -41,9 +37,9 @@
         <%= link_to review do %><%= review.name %><% end %>
       </h1>
       <div class="location">
-        <a href="#">
+        <!-- <a href="#">
         <i class="fa fa-map-marker"></i>Ha Noi, Viet Nam
-        </a>
+        </a> -->
       </div>
       <ul class="facilities-list clearfix">
         <li>
@@ -77,13 +73,11 @@
       </ul>
     </div>
     <div class="footer">
-      <a href="#">
       <% if review.user.present? %>
-        <i class="fa fa-user"></i> <%= review.user.name %>
+        <i class="fa fa-user"></i> <%= link_to review.user.name, review.user %>
       <% else %>
         <i class="fa fa-user"></i> Unknown User
       <% end %>
-      </a>
       <span>
       <i class="fa fa-calendar-o"></i> <%= review.created_at.strftime("%H:%M %-d/%-m/%y") %>
       </span>
