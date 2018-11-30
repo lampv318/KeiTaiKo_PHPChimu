@@ -20,7 +20,7 @@ class Review < ApplicationRecord
   validates :brand_id, presence: true
   validates :review, length: {maximum: 500}
 
-  ratyrate_rateable "original_score"
+  ratyrate_rateable "original_score", "cpu", "screen_size", "battery", "price" 
 
   def self.checked_review
     where is_confirm: true
