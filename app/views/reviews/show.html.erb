@@ -24,7 +24,7 @@
                   <h3><%= @review.name %></h3>
                   <p><i class="fa fa-map-marker"></i>
                     <% if @review.user.present? %>
-                      <%= @review.user.name %>
+                      <%= link_to @review.user.name, @review.user %>
                     <% else %>
                       Unknown User
                     <% end %>
@@ -33,12 +33,12 @@
                   <%= render "likes/like_form" %>
                 </div>
                 <div class="p-r">
-                  <h3><%= t "price_str", price: price_review(@review.price) %></h3>
+                  <!-- <h3><%= t "price_str", price: price_review(@review.price) %></h3>
                   <%= rating_for @review, "original_score", star: 5,  disable_after_rate: false %>
                   <p><b>Total Vote:</b> <%= @review.rates("original_score").count %></p>
                   <% unless @review.rates("original_score").count == 0 %>
                   <p><b>Average Score:</b> <%= @review.average("original_score").avg %></p>
-                  <% end %>
+                  <% end %> -->
                 </div>
               </div>
             </div>
@@ -107,7 +107,9 @@
             <h3 class="heading">Review</h3>
           </div>
           <div class="p-r">
+            <% if @review.user == current_user %>
             <%= link_to t(".edit_review"), edit_review_path(@review) %>
+            <% end %>
           </div>
           <br><br><br>
           <p><%= @review.review %></p>
