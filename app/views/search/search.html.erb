@@ -11,6 +11,45 @@
     </div>
 </div>
 
+<div class="search-area" id="search-area-1">
+  <div class="container">
+    <div class="search-area-inner">
+      <div class="search-contents ">
+        <%= search_form_for @q, url: searchs_path do |f| %>
+        <div class="row">
+          <div class="col-6 col-lg-3 col-md-3">
+            <div class="form-group">
+              <%= f.select :operator_system_id_eq_any,
+                OperatorSystem.all.collect { |p| [ p.name, p.id ] },
+                {}, {class: "selectpicker search-fields"}  %>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 col-md-3">
+            <div class="form-group">
+              <%= f.select :brand_id_eq_any, Brand.all.collect { |p| [ p.name, p.id ] },
+               {}, {class: "selectpicker search-fields"} %>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 col-md-3">
+            <div class="form-group">
+                <div class="range-slider">
+                    <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+          </div>
+        <div class="col-6 col-lg-3 col-md-3">
+          <div class="form-group">
+            <button class="search-button btn-md btn-color" type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="properties-list-fullwidth content-area-2">
   <div class="container">
     <div class="tabbing tabbing-box mb-60">
