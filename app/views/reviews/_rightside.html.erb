@@ -1,33 +1,35 @@
 <div class="col-lg-4 col-md-12">
-  <div class="sidebar mbl">
-    <div class="widget categories">
-      <h5 class="sidebar-title">Rate</h5>
-      <div class="price-ratings-box">
-        <h6 class="display-inline width-100">Overall:</h6>
-        <div class="display-inline"><%= rating_for @review, "original_score", star: 5,  disable_after_rate: false %></div>
-        <br>
-        <h6 class="display-inline width-100">CPU:</h6>
-        <div class="display-inline"><%= rating_for @review, "cpu", star: 5,  disable_after_rate: false %></div>
-        <br>
-        <h6 class="display-inline width-100">Screen size:</h6>
-        <div class="display-inline"><%= rating_for @review, "screen_size", star: 5,  disable_after_rate: false %></div>
-        <br>
-        <h6 class="display-inline width-100">Battery:</h6>
-        <div class="display-inline"><%= rating_for @review, "battery", star: 5,  disable_after_rate: false %></div>
-        <br>
-        <h6 class="display-inline width-100">Price:</h6>
-        <div class="display-inline"><%= rating_for @review, "price", star: 5,  disable_after_rate: false %></div>
-        <br>
-        <%= bar_chart [
-          ["Overall", @review.rates("original_score").count==0?0:@review.average("original_score").avg], 
-          ["CPU", @review.rates("cpu").count==0?0:@review.average("cpu").avg],
-          ["Screen size", @review.rates("screen_size").count==0?0:@review.average("screen_size").avg],
-          ["Battery", @review.rates("battery").count==0?0:@review.average("battery").avg],
-          ["Price", @review.rates("price").count==0?0:@review.average("price").avg]
-          ], min: 0, max: 5 %>
+  <% if @review.present? %>
+    <div class="sidebar mbl">
+      <div class="widget categories">
+        <h5 class="sidebar-title">Rate</h5>
+        <div class="price-ratings-box">
+          <h6 class="display-inline width-100">Overall:</h6>
+          <div class="display-inline"><%= rating_for @review, "original_score", star: 5,  disable_after_rate: false %></div>
+          <br>
+          <h6 class="display-inline width-100">CPU:</h6>
+          <div class="display-inline"><%= rating_for @review, "cpu", star: 5,  disable_after_rate: false %></div>
+          <br>
+          <h6 class="display-inline width-100">Screen size:</h6>
+          <div class="display-inline"><%= rating_for @review, "screen_size", star: 5,  disable_after_rate: false %></div>
+          <br>
+          <h6 class="display-inline width-100">Battery:</h6>
+          <div class="display-inline"><%= rating_for @review, "battery", star: 5,  disable_after_rate: false %></div>
+          <br>
+          <h6 class="display-inline width-100">Price:</h6>
+          <div class="display-inline"><%= rating_for @review, "price", star: 5,  disable_after_rate: false %></div>
+          <br>
+          <%= bar_chart [
+            ["Overall", @review.rates("original_score").count==0?0:@review.average("original_score").avg], 
+            ["CPU", @review.rates("cpu").count==0?0:@review.average("cpu").avg],
+            ["Screen size", @review.rates("screen_size").count==0?0:@review.average("screen_size").avg],
+            ["Battery", @review.rates("battery").count==0?0:@review.average("battery").avg],
+            ["Price", @review.rates("price").count==0?0:@review.average("price").avg]
+            ], min: 0, max: 5 %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
   <div class="sidebar mbl">
     <!-- Categories start -->
     <div class="widget categories">
