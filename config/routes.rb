@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :comments, only: [:update, :destroy]
   resources :likes, only: [:create, :destroy]
   get "search", to: "search#search"
+  get "searchs", to: "searchs#search"
   resources :brands, only: [:show]
 
   namespace :admin do
