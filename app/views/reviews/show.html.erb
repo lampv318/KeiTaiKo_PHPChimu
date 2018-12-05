@@ -33,8 +33,8 @@
                   <%= render "likes/like_form" %>
                 </div>
                 <div class="p-r">
-                  <!-- <h3><%= t "price_str", price: price_review(@review.price) %></h3>
-                  <%= rating_for @review, "original_score", star: 5,  disable_after_rate: false %>
+                  <h3><%= t "price_str", price: price_review(@review.price) %></h3>
+                  <!-- <%= rating_for @review, "original_score", star: 5,  disable_after_rate: false %>
                   <p><b>Total Vote:</b> <%= @review.rates("original_score").count %></p>
                   <% unless @review.rates("original_score").count == 0 %>
                   <p><b>Average Score:</b> <%= @review.average("original_score").avg %></p>
