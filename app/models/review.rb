@@ -22,6 +22,9 @@ class Review < ApplicationRecord
 
   ratyrate_rateable "original_score", "cpu", "screen_size", "battery", "price" 
 
+  scope :price_gt, -> (amount) {where('price > ?', amount)}
+  scope :price_lt, -> (amount) {where('price < ?', amount)}
+
   def self.checked_review
     where is_confirm: true
   end
