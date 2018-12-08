@@ -44,7 +44,7 @@ end
     brand_id: 1 + rand(5),
     user_id: 1 + rand(20),
     review: Faker::GameOfThrones.quote * 2,
-    price: (5000000 + rand(20000000)).to_s + "VND",
+    price: 200 + rand(2000),
     is_confirm: [true, false].sample
   )
 end
