@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   root "static_pages#show"
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   resources :users, only: [:show]
   resources :reviews do
     resources :comments, only: :create

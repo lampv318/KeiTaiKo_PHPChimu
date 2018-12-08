@@ -13,22 +13,22 @@
               <h4><%= raw t(".create_your_account") %></h4>
             </div>
             <div class="form-group">
-              <%= f.label :email %><br />
+              <%= f.label :email %><font color="red"> (*)</font><br />
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email Address" %>
             </div>
             <div class="form-group">
-              <%= f.label :name %><br />
+              <%= f.label :name %><font color="red"> (*)</font><br />
               <%= f.text_field :name, class: "form-control", placeholder: "Full Name" %>
             </div>
             <div class="form-group">
               <%= f.label :password %>
               <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
+              <% end %><font color="red"> (*)</font><br />
               <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
             </div>
             <div class="form-group">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :password_confirmation %><font color="red"> (*)</font><br />
               <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %>
             </div>
             <div class="form-group">
