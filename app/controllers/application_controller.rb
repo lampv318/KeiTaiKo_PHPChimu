@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :recent_review_footer
+  before_action :set_searchs
 
   protected
 
@@ -45,5 +46,9 @@ class ApplicationController < ActionController::Base
 
   def recent_review_footer
     @rrf = Review.where(is_confirm: true).last(2)
+  end
+
+  def set_searchs
+    @q= Review.ransack params[:q]
   end
 end
